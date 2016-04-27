@@ -17,3 +17,11 @@ help.txt | *Must* be in the same directory as binary for correct work
 * *ssmtp* to send e-mail
 * *qpdfview* to view the output
 * any Tex compiler (*TexMaker*  was used)
+
+## Configuring SSMTP
+
+- *Notice:* **GMail** was used, so you'll need to find out what to do with other mail services by yourself.
+
+A great instruction can be found [here](https://wiki.archlinux.org/index.php/SSMTP). Make sure to check **Using an App Password** section before reporting any issues! 
+
+*Notice*:  `$ echo test | mail -v -s "testing ssmtp setup" tousername@somedomain.com` may **not** work, it's okay.
