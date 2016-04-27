@@ -31,6 +31,7 @@ int send_email (const char header_file[], const char message_file[], const char 
     strcat (command, " >> ./Mail/temp_message");
     system (command);
     command[0] = '\0';
+    printf ("Sending...\n");
     strcat (command, "ssmtp ");
     strcat (command, to_whom);
     strcat (command, " < ./Mail/temp_message");
