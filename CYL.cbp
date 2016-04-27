@@ -32,17 +32,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../Shared Library/buffer.h" />
-		<Unit filename="../Shared Library/list.h" />
-		<Unit filename="../Shared Library/mail.h" />
-		<Unit filename="../Shared Library/map.h" />
-		<Unit filename="../Shared Library/mylib.h" />
-		<Unit filename="../Shared Library/parsing.h" />
-		<Unit filename="../Shared Library/tex.h" />
-		<Unit filename="../Shared Library/tree.h" />
-		<Unit filename="../Shared Library/type_info.h" />
-		<Unit filename="differ.h" />
-		<Unit filename="fu_table.h" />
+		<Unit filename="lib/buffer.h" />
+		<Unit filename="lib/differ.h" />
+		<Unit filename="lib/fu_table.h" />
+		<Unit filename="lib/list.h" />
+		<Unit filename="lib/mail.h" />
+		<Unit filename="lib/mylib.h" />
+		<Unit filename="lib/tex.h" />
+		<Unit filename="lib/tree.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
