@@ -10,7 +10,7 @@ int send_email (const char header_file[], const char message_file[], const char 
 {
     Buffer header_text = {};
     buffer_construct(&header_text, header_file);
-    open_file (temp_message, "./Mail/temp_message", "w", "Can't open file!");
+    open_file (temp_message, "./mail/temp_message", "w", "Can't open file!./mail/temp_message");
     char to_whom[NAME_MAX];
     sscanf (header_text.chars, "To:%s", to_whom);
     fprintf (temp_message, "%sMime-Version: 1.0\nContent-Type: multipart/mixed; boundary=\"newpart\"\n--newpart\n", header_text.chars);
@@ -28,15 +28,15 @@ int send_email (const char header_file[], const char message_file[], const char 
     char command[100] = {};
     strcat (command, "base64 ");
     strcat (command, attach_file);
-    strcat (command, " >> ./Mail/temp_message");
+    strcat (command, " >> ./mail/temp_message");
     system (command);
     command[0] = '\0';
-    printf ("Sending...\n");
+    printf ("Sending letter...\n");
     strcat (command, "ssmtp ");
     strcat (command, to_whom);
-    strcat (command, " < ./Mail/temp_message");
+    strcat (command, " < ./mail/temp_message");
     system (command);
-    system ("rm ./Mail/temp_message");
+    system ("rm ./mail/temp_message");
 
     return 0;
 }

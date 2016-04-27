@@ -23,6 +23,7 @@ bool tex_finish (FILE* tex)
 
 void show_tex_file (const char filename[])
 {
+    printf ("Showing tex...\n");
     assert (filename);
     /*char* last_slash = strrchr (filename, '/');
     if (!last_slash)
@@ -31,11 +32,11 @@ void show_tex_file (const char filename[])
         last_slash++;
     char* file = strdup (last_slash);*/
     char cmd[128] = {};
-    strcat (cmd, "pdflatex -output-directory=./Tex -interaction=batchmode -jobname=\"show_tex_file\" ");
+    strcat (cmd, "pdflatex -output-directory=./tex -interaction=batchmode -jobname=\"show_tex_file\" ");
 
     strcat (cmd, filename);
     system (cmd);
-    system ("qpdfview ./Tex/show_tex_file.pdf");
+    system ("qpdfview ./tex/show_tex_file.pdf");
     //free (file);
 }
 

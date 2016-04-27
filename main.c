@@ -46,8 +46,7 @@ int main (int argc, char* argv[])
     write_lab(info_file, tex_file);
     close_file(tex_file);
     close_file(info_file);
-
-    send_email("./Mail/header", "./Mail/message", "./Tex/show_tex_file.pdf", "Лаба.pdf");
+    send_email("./mail/header", "./mail/message", "./tex/show_tex_file.pdf", "lab.pdf");
     show_tex_file("laba.tex");
 
     return NO_ERROR;

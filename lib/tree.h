@@ -582,9 +582,9 @@ bool tree_node_show_tex (const TreeNode* This, FILE* format_file)
     fprintf (tex_file, "%s", tree_node_to_tex(This, true));
     fprintf (tex_file, "\\end{document}\n");
     close_file(tex_file);
-    system ("pdflatex -output-directory=./Tex -interaction=batchmode ./Tex/temp_show_tex.tex");
-    system ("rm ./Tex/temp_show_tex.tex");
-    system ("qpdfview ./Tex/temp_show_tex.pdf");
+    system ("pdflatex -output-directory=./tex -interaction=batchmode ./tex/temp_show_tex.tex");
+    system ("rm ./tex/temp_show_tex.tex");
+    system ("qpdfview ./tex/temp_show_tex.pdf");
     return true;
 }
 
